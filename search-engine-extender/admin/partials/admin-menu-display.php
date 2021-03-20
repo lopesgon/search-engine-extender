@@ -93,41 +93,42 @@ $excluded_ids = explode(',', get_option('see_excluded_ids'));
     document.getElementById("see-chips").appendChild(element);
   }
 </script>
-
-<!-- This file should primarily consist of HTML with a little bit of PHP. -->
-<h1>Search Engine Customizer</h1>
-<form id="see-add-exclusion" method="post" action="javascript:void(0);" onsubmit="addExclusion(event, this)">
-  <table class="form-table">
-    <tr valign="top">
-      <th scope="row">Add new id to be excluded</th>
-      <td>
-        <input type="number" name="excludedIdValue" />
-        <input type="submit" name="addIdSubmit" class="button button-primary" value="Add">
-      </td>
-    </tr>
-  </table>
-  <div class="row">
-    <div id="see-chips" class="column">
-      <?php foreach ($excluded_ids as $value) {
-        if (!empty($value)) {
-      ?>
-          <a id="see-<?php echo $value ?>" class="see-chip" href="<?php echo get_permalink($value) ?>" target="_blank">
-            <div class="see-post-id">
-              <?php echo $value ?>
-            </div>
-            <span onclick="deleteExclusion(event, <?php echo $value ?>)" class="dashicons dashicons-no-alt"></span>
-          </a>
-      <?php }
-      } ?>
+<div class="see-container">
+  <!-- This file should primarily consist of HTML with a little bit of PHP. -->
+  <h1>Search Engine Customizer</h1>
+  <form id="see-add-exclusion" method="post" action="javascript:void(0);" onsubmit="addExclusion(event, this)">
+    <table class="form-table">
+      <tr valign="top">
+        <th scope="row">Add new id to be excluded</th>
+        <td>
+          <input type="number" name="excludedIdValue" />
+          <input type="submit" name="addIdSubmit" class="button button-primary" value="Add">
+        </td>
+      </tr>
+    </table>
+    <div class="row">
+      <div id="see-chips" class="column">
+        <?php foreach ($excluded_ids as $value) {
+          if (!empty($value)) {
+        ?>
+            <a id="see-<?php echo $value ?>" class="see-chip" href="<?php echo get_permalink($value) ?>" target="_blank">
+              <div class="see-post-id">
+                <?php echo $value ?>
+              </div>
+              <span onclick="deleteExclusion(event, <?php echo $value ?>)" class="dashicons dashicons-no-alt"></span>
+            </a>
+        <?php }
+        } ?>
+      </div>
     </div>
-  </div>
-</form>
-<form id="see-exclusions-form" method="post" action="options.php" onsubmit="saveChanges(event, this)">
-  <?php settings_fields('search-engine-extender-settings'); ?>
-  <?php do_settings_sections('search-engine-extender-settings'); ?>
-  <input style="display:none" type="text" name="see_excluded_ids" value="<?php echo get_option('see_excluded_ids'); ?>" />
-  <p class="submit see-save">
-    <input disabled type="submit" name="exclusionsSubmit" class="see-save button button-primary" value="Save Changes">
-  </p>
-</form>
+  </form>
+  <form id="see-exclusions-form" method="post" action="options.php" onsubmit="saveChanges(event, this)">
+    <?php settings_fields('search-engine-extender-settings'); ?>
+    <?php do_settings_sections('search-engine-extender-settings'); ?>
+    <input style="display:none" type="text" name="see_excluded_ids" value="<?php echo get_option('see_excluded_ids'); ?>" />
+    <p class="submit see-save">
+      <input disabled type="submit" name="exclusionsSubmit" class="see-save button button-primary" value="Save Changes">
+    </p>
+  </form>
+</div>
 <?php

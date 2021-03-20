@@ -49,7 +49,7 @@ function activate_search_engine_extender() {
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-search-engine-extender-deactivator.php
  */
-function deactivate_sesarch_engine_extender() {
+function deactivate_search_engine_extender() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-search-engine-extender-deactivator.php';
 	Search_Engine_Extender_Deactivator::deactivate();
 }
