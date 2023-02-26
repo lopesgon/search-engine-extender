@@ -4,7 +4,7 @@
  * The admin-specific functionality of the plugin.
  *
  * @link       https://github.com/lopesgon/wordpress-plugins
- * @since      1.0.1
+ * @since      1.0.2
  *
  * @package    Search_Engine_Extender
  * @subpackage search-engine-extender/admin
@@ -26,7 +26,7 @@ class Search_Engine_Extender_Admin
 	/**
 	 * The ID of this plugin.
 	 *
-	 * @since    1.0.1
+	 * @since    1.0.2
 	 * @access   private
 	 * @var      string    $plugin_name    The ID of this plugin.
 	 */
@@ -35,7 +35,7 @@ class Search_Engine_Extender_Admin
 	/**
 	 * The version of this plugin.
 	 *
-	 * @since    1.0.1
+	 * @since    1.0.2
 	 * @access   private
 	 * @var      string    $version    The current version of this plugin.
 	 */
@@ -44,7 +44,7 @@ class Search_Engine_Extender_Admin
 	/**
 	 * Initialize the class and set its properties.
 	 *
-	 * @since    1.0.1
+	 * @since    1.0.2
 	 * @param      string    $plugin_name       The name of this plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
@@ -58,7 +58,7 @@ class Search_Engine_Extender_Admin
 	/**
 	 * Register the stylesheets for the admin area.
 	 *
-	 * @since    1.0.1
+	 * @since    1.0.2
 	 */
 	public function enqueue_styles()
 	{
@@ -81,7 +81,7 @@ class Search_Engine_Extender_Admin
 	/**
 	 * Register the JavaScript for the admin area.
 	 *
-	 * @since    1.0.1
+	 * @since    1.0.2
 	 */
 	public function enqueue_scripts()
 	{

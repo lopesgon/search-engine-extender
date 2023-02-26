@@ -35,6 +35,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Rename this for your plugin and update it as you release new versions.
  */
 define( 'SEARCH_ENGINE_EXTENDER_VERSION', '1.0.2' );
+define ( 'SEARCH_ENGINE_EXTENDER_PLUGIN_NAME' , 'search-engine-extender');
 
 /**
  * The code that runs during plugin activation.
@@ -70,7 +71,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-search-engine-extender.php
  * then kicking off the plugin from this point in the file does
  * not affect the page life cycle.
  *
- * @since    1.0.1
+ * @since    1.0.2
  */
 function run_search_engine_extender() {
 

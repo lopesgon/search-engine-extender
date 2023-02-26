@@ -6,7 +6,7 @@
  * This file is used to markup the admin-facing aspects of the plugin.
  *
  * @link       https://github.com/lopesgon/wordpress-plugins
- * @since      1.0.1
+ * @since      1.0.2
  *
  * @package    Search_Engine_Extender
  * @subpackage search-engine-extender/admin/partials

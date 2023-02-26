@@ -4,7 +4,7 @@
  * Fired during plugin activation
  *
  * @link       https://github.com/lopesgon/wordpress-plugins
- * @since      1.0.1
+ * @since      1.0.2
  *
  * @package    Search_Engine_Extender
  * @subpackage search-engine-extender/includes
@@ -15,7 +15,7 @@
  *
  * This class defines all code necessary to run during the plugin's activation.
  *
- * @since      1.0.1
+ * @since      1.0.2
  * @package    Search_Engine_Extender
  * @subpackage search-engine-extender/includes
  * @author     Frederic Lopes <mag.frederic@icloud.com>
@@ -27,7 +27,7 @@ class Search_Engine_Extender_Activator {
 	 *
 	 * Long Description.
 	 *
-	 * @since    1.0.1
+	 * @since    1.0.2
 	 */
 	public static function activate() {
 		

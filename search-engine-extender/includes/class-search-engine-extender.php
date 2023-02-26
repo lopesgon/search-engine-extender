@@ -7,7 +7,7 @@
  * public-facing side of the site and the admin area.
  *
  * @link       https://github.com/lopesgon/wordpress-plugins
- * @since      1.0.1
+ * @since      1.0.2
  *
  * @package    Search Engine Extender
  * @subpackage search-engine-extender/includes
@@ -22,7 +22,7 @@
  * Also maintains the unique identifier of this plugin as well as the current
  * version of the plugin.
  *
- * @since      1.0.1
+ * @since      1.0.2
  * @package    Search Engine Extender
  * @subpackage search-engine-extender/includes
  * @author     Frederic Lopes <mag.frederic@icloud.com>
@@ -30,11 +30,13 @@
 class Search_Engine_Extender
 {
 
+  private $plugin_name;
+
   /**
    * The loader that's responsible for maintaining and registering all hooks that power
    * the plugin.
    *
-   * @since    1.0.1
+   * @since    1.0.2
    * @access   protected
    * @var      Search_Engine_Extender_Loader    $loader    Maintains and registers all hooks for the plugin.
    */
@@ -43,7 +45,7 @@ class Search_Engine_Extender
   /**
    * The unique identifier of this plugin.
    *
-   * @since    1.0.1
+   * @since    1.0.2
    * @access   protected
    * @var      string    $plugin_name    The string used to uniquely identify this plugin.
    */
@@ -52,7 +54,7 @@ class Search_Engine_Extender
   /**
    * The current version of the plugin.
    *
-   * @since    1.0.1
+   * @since    1.0.2
    * @access   protected
    * @var      string    $version    The current version of the plugin.
    */
@@ -65,7 +67,7 @@ class Search_Engine_Extender
    * Load the dependencies, define the locale, and set the hooks for the admin area and
    * the public-facing side of the site.
    *
-   * @since    1.0.1
+   * @since    1.0.2
    */
   public function __construct()
   {
@@ -74,7 +76,13 @@ class Search_Engine_Extender
     } else {
       $this->version = '1.0.0';
     }
-    $this->plugin_name = 'search-engine-extender';
+
+    if (defined('SEARCH_ENGINE_EXTENDER_PLUGIN_NAME')) {
+      $this->plugin_name = SEARCH_ENGINE_EXTENDER_PLUGIN_NAME;
+    } else {
+      $this->plugin_name = 'search-engine-extender';
+
+    }
 
     $this->load_dependencies();
     $this->set_locale();
@@ -95,7 +103,7 @@ class Search_Engine_Extender
    * Create an instance of the loader which will be used to register the hooks
    * with WordPress.
    *
-   * @since    1.0.1
+   * @since    1.0.2
    * @access   private
    */
   private function load_dependencies()
@@ -133,7 +141,7 @@ class Search_Engine_Extender
    * Uses the Search_Engine_Extender_i18n class in order to set the domain and to register the hook
    * with WordPress.
    *
-   * @since    1.0.1
+   * @since    1.0.2
    * @access   private
    */
   private function set_locale()
@@ -148,7 +156,7 @@ class Search_Engine_Extender
    * Register all of the hooks related to the admin area functionality
    * of the plugin.
    *
-   * @since    1.0.1
+   * @since    1.0.2
    * @access   private
    */
   private function define_admin_hooks()
@@ -168,7 +176,7 @@ class Search_Engine_Extender
    * Register all of the hooks related to the public-facing functionality
    * of the plugin.
    *
-   * @since    1.0.1
+   * @since    1.0.2
    * @access   private
    */
   private function define_public_hooks()
@@ -184,7 +192,7 @@ class Search_Engine_Extender
   /**
    * Run the loader to execute all of the hooks with WordPress.
    *
-   * @since    1.0.1
+   * @since    1.0.2
    */
   public function run()
   {
@@ -195,7 +203,7 @@ class Search_Engine_Extender
    * The name of the plugin used to uniquely identify it within the context of
    * WordPress and to define internationalization functionality.
    *
-   * @since     1.0.1
+   * @since     1.0.2
    * @return    string    The name of the plugin.
    */
   public function get_plugin_name()
@@ -206,7 +214,7 @@ class Search_Engine_Extender
   /**
    * The reference to the class that orchestrates the hooks with the plugin.
    *
-   * @since     1.0.1
+   * @since     1.0.2
    * @return    Search_Engine_Extender_Loader    Orchestrates the hooks of the plugin.
    */
   public function get_loader()
@@ -217,7 +225,7 @@ class Search_Engine_Extender
   /**
    * Retrieve the version number of the plugin.
    *
-   * @since     1.0.1
+   * @since     1.0.2
    * @return    string    The version number of the plugin.
    */
   public function get_version()
