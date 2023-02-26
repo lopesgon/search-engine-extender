@@ -9,14 +9,14 @@
  * that starts the plugin.
  *
  * @link              https://github.com/lopesgon/wordpress-plugins
- * @since             1.0.0
+ * @since             1.0.2
  * @package           Search Engine Extender
  *
  * @wordpress-plugin
  * Plugin Name:       Search Engine Extender
  * Plugin URI:        https://github.com/lopesgon/wordpress-plugins
  * Description:       Provides admin settings to customize Wordpress search engine results
- * Version:           1.0.0
+ * Version:           1.0.2
  * Author:            lopesgon
  * Author URI:        https://github.com/lopesgon/wordpress-plugins
  * License:           GPL-3.0+
@@ -34,7 +34,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'SEARCH_ENGINE_EXTENDER_VERSION', '1.0.0' );
+define( 'SEARCH_ENGINE_EXTENDER_VERSION', '1.0.2' );
 
 /**
  * The code that runs during plugin activation.
@@ -70,7 +70,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-search-engine-extender.php
  * then kicking off the plugin from this point in the file does
  * not affect the page life cycle.
  *
- * @since    1.0.0
+ * @since    1.0.1
  */
 function run_search_engine_extender() {
 

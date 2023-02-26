@@ -20,7 +20,7 @@
  * https://github.com/tommcfarlin/WordPress-Plugin-Boilerplate/pull/123#issuecomment-28541913
  *
  * @link       https://github.com/lopesgon/wordpress-plugins
- * @since      1.0.0
+ * @since      1.0.1
  *
  * @package    Search Engine Extender
  */
@@ -29,3 +29,6 @@
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	exit;
 }
+
+$option_name = 'see_excluded_ids';
+delete_option( $option_name );
