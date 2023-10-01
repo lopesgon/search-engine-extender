@@ -7,7 +7,7 @@
  * Plugin Name:       Search Engine Extender
  * Plugin URI:        https://github.com/lopesgon/wordpress-plugins
  * Description:       Provides admin settings to customize Wordpress search engine results
- * Version:           1.0.2
+ * Version:           1.1.0
  * Author:            lopesgon
  * Author URI:        https://github.com/lopesgon/wordpress-plugins
  * License:           GPL-3.0+
@@ -18,7 +18,7 @@
 defined('ABSPATH') || exit;
 
 
-define('SEARCH_ENGINE_EXTENDER_VERSION', '1.0.2');
+define('SEARCH_ENGINE_EXTENDER_VERSION', '1.1.0');
 define('SEARCH_ENGINE_EXTENDER_PLUGIN_NAME', 'search-engine-extender');
 define('SEARCH_ENGINE_EXTENDER_DEVELOPMENT_MODE', __SEARCH_ENGINE_EXTENDER_DEVELOPMENT_MODE__);
 
