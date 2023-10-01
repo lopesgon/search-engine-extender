@@ -19,7 +19,7 @@ module.exports = {
   entry: entryPoints,
   output: {
     path: path.resolve(__dirname, outputPath),
-    filename: '[name].min.[fullhash].js',
+    filename: '[name].js',
     clean: true,
   },
   resolve: {
@@ -53,7 +53,7 @@ module.exports = {
     }),
     // css extraction into dedicated file
     new MiniCssExtractPlugin({
-      filename: '[name].min.[fullhash].css'
+      filename: '[name].css'
     }),
     new CopyPlugin({
       patterns: [

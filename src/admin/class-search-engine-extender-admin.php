@@ -15,12 +15,12 @@ class Search_Engine_Extender_Admin
 
   public function enqueue_styles()
   {
-    wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/search-engine-extender-admin.css', array(), $this->version, 'all');
+    wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/main.css', array(), $this->version, 'all');
   }
 
   public function enqueue_scripts()
   {
-    wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/search-engine-extender-admin.js', array('jquery'), $this->version, false);
+    wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/main.js', array(), $this->version, false);
 
     $script_params = array(
       'excludedPosts' => explode(',', get_option('see_excluded_ids'))

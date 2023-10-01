@@ -15,12 +15,12 @@ class Search_Engine_Extender_Public
 
   public function enqueue_styles()
   {
-    // wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/search-engine-extender-public.css', array(), $this->version, 'all');
+    // wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/main.css', array(), $this->version, 'all');
   }
 
   public function enqueue_scripts()
   {
-    // wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/search-engine-extender-public.js', array('jquery'), $this->version, false);
+    // wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/main.js', array(), $this->version, false);
   }
 
   function search_engine_exclude_filter($query)
