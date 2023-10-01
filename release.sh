@@ -167,7 +167,7 @@ if [ "$dryRun" -eq "1" ]; then
   exit 0
 fi
 
-git commit $versionFile -m "Released theme version $newTag"
+git commit $versionFile -m "Release plugin version $newTag"
 git push
 
 # Add prefix and tag current sha1
