@@ -1,0 +1,10 @@
+.DS_Store
+
+# Backup files
+*.bak
+
+# Code editor
+.vscode
+node_modules/
+dist/
+releases/
